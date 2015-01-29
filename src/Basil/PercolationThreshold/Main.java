@@ -1,4 +1,4 @@
-package com.company;
+package Basil.PercolationThreshold;
 
 public class Main {
 

@@ -15,7 +15,7 @@
  *  with with site (1, 1) in the upper left-hand corner.
  *
  ****************************************************************************/
-package com.company;
+package Basil.PercolationThreshold;
 import java.awt.Font;
 
 
