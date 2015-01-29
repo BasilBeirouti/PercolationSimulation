@@ -1,4 +1,4 @@
-package Basil.PercolationThreshold;
+package PercolationThreshold.extlib;
 
 /*************************************************************************
  *  Compilation:  javac StdOut.java
@@ -14,14 +14,14 @@ import java.io.UnsupportedEncodingException;
 import java.util.Locale;
 
 /**
- *  <i>Standard output</i>. This class provides methods for writing strings
- *  and numbers to standard output.
- *  <p>
- *  For additional documentation, see <a href="http://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
- *  <i>Introduction to Programming in Java: An Interdisciplinary Approach</i> by Robert Sedgewick and Kevin Wayne.
+ * <i>Standard output</i>. This class provides methods for writing strings
+ * and numbers to standard output.
+ * <p/>
+ * For additional documentation, see <a href="http://introcs.cs.princeton.edu/15inout">Section 1.5</a> of
+ * <i>Introduction to Programming in Java: An Interdisciplinary Approach</i> by Robert Sedgewick and Kevin Wayne.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
+ * @author Robert Sedgewick
+ * @author Kevin Wayne
  */
 public final class StdOut {
 
@@ -38,14 +38,17 @@ public final class StdOut {
     static {
         try {
             out = new PrintWriter(new OutputStreamWriter(System.out, CHARSET_NAME), true);
+        } catch (UnsupportedEncodingException e) {
+            System.out.println(e);
         }
-        catch (UnsupportedEncodingException e) { System.out.println(e); }
     }
 
     // don't instantiate
-    private StdOut() { }
+    private StdOut() {
+    }
 
     // close the output stream (not required)
+
     /**
      * Close standard output.
      */
@@ -227,7 +230,7 @@ public final class StdOut {
         StdOut.println("Test");
         StdOut.println(17);
         StdOut.println(true);
-        StdOut.printf("%.6f\n", 1.0/7.0);
+        StdOut.printf("%.6f\n", 1.0 / 7.0);
     }
 
 }

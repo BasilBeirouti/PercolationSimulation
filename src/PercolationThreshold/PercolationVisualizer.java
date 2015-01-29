@@ -15,9 +15,10 @@
  *  with with site (1, 1) in the upper left-hand corner.
  *
  ****************************************************************************/
-package Basil.PercolationThreshold;
-import java.awt.Font;
+package PercolationThreshold;
 
+import java.awt.*;
+import PercolationThreshold.extlib.*;
 
 
 public class PercolationVisualizer {
@@ -31,7 +32,7 @@ public class PercolationVisualizer {
         StdDraw.setPenColor(StdDraw.BLACK);
         StdDraw.setXscale(0, N);
         StdDraw.setYscale(0, N);
-        StdDraw.filledSquare(N/2.0, N/2.0, N/2.0);
+        StdDraw.filledSquare(N / 2.0, N / 2.0, N / 2.0);
 
         // draw N-by-N grid
         int opened = 0;
@@ -40,12 +41,10 @@ public class PercolationVisualizer {
                 if (perc.isFull(row, col)) {
                     StdDraw.setPenColor(StdDraw.BOOK_LIGHT_BLUE);
                     opened++;
-                }
-                else if (perc.isOpen(row, col)) {
+                } else if (perc.isOpen(row, col)) {
                     StdDraw.setPenColor(StdDraw.WHITE);
                     opened++;
-                }
-                else
+                } else
                     StdDraw.setPenColor(StdDraw.BLACK);
                 StdDraw.filledSquare(col - 0.5, N - row + 0.5, 0.45);
             }
@@ -54,13 +53,14 @@ public class PercolationVisualizer {
         // write status text
         StdDraw.setFont(new Font("SansSerif", Font.PLAIN, 12));
         StdDraw.setPenColor(StdDraw.BLACK);
-        StdDraw.text(.25*N, -N*.025, opened + " open sites");
-        if (perc.percolates()) StdDraw.text(.75*N, -N*.025, "percolates");
-        else                   StdDraw.text(.75*N, -N*.025, "does not percolate");
+        StdDraw.text(.25 * N, -N * .025, opened + " open sites");
+        if (perc.percolates()) StdDraw.text(.75 * N, -N * .025, "percolates");
+        else StdDraw.text(.75 * N, -N * .025, "does not percolate");
 
     }
+
     public static void main(String[] args) {
-        In in = new In( new java.util.Scanner("10\n" +
+        In in = new In(new java.util.Scanner("10\n" +
                 " 10   2\n" +
                 "  2  10\n" +
                 "  6   8\n" +

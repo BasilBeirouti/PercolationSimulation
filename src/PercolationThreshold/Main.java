@@ -1,4 +1,5 @@
-package Basil.PercolationThreshold;
+package PercolationThreshold;
+import PercolationThreshold.extlib.*;
 
 public class Main {
 

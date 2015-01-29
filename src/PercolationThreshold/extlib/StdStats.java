@@ -1,4 +1,4 @@
-package Basil.PercolationThreshold;
+package PercolationThreshold.extlib;
 
 
 /*************************************************************************
@@ -34,21 +34,22 @@ package Basil.PercolationThreshold;
  *************************************************************************/
 
 /**
- *  <i>Standard statistics</i>. This class provides methods for computing
- *  statistics such as min, max, mean, sample standard deviation, and
- *  sample variance.
- *  <p>
- *  For additional documentation, see
- *  <a href="http://introcs.cs.princeton.edu/22library">Section 2.2</a> of
- *  <i>Introduction to Programming in Java: An Interdisciplinary Approach</i>
- *  by Robert Sedgewick and Kevin Wayne.
+ * <i>Standard statistics</i>. This class provides methods for computing
+ * statistics such as min, max, mean, sample standard deviation, and
+ * sample variance.
+ * <p/>
+ * For additional documentation, see
+ * <a href="http://introcs.cs.princeton.edu/22library">Section 2.2</a> of
+ * <i>Introduction to Programming in Java: An Interdisciplinary Approach</i>
+ * by Robert Sedgewick and Kevin Wayne.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
+ * @author Robert Sedgewick
+ * @author Kevin Wayne
  */
 public final class StdStats {
 
-    private StdStats() { }
+    private StdStats() {
+    }
 
     /**
      * Returns the maximum value in the array a[], -infinity if no such value.
@@ -304,7 +305,7 @@ public final class StdStats {
      */
     public static void plotPoints(double[] a) {
         int N = a.length;
-        StdDraw.setXscale(0, N-1);
+        StdDraw.setXscale(0, N - 1);
         StdDraw.setPenRadius(1.0 / (3.0 * N));
         for (int i = 0; i < N; i++) {
             StdDraw.point(i, a[i]);
@@ -316,10 +317,10 @@ public final class StdStats {
      */
     public static void plotLines(double[] a) {
         int N = a.length;
-        StdDraw.setXscale(0, N-1);
+        StdDraw.setXscale(0, N - 1);
         StdDraw.setPenRadius();
         for (int i = 1; i < N; i++) {
-            StdDraw.line(i-1, a[i-1], i, a[i]);
+            StdDraw.line(i - 1, a[i - 1], i, a[i]);
         }
     }
 
@@ -328,9 +329,9 @@ public final class StdStats {
      */
     public static void plotBars(double[] a) {
         int N = a.length;
-        StdDraw.setXscale(0, N-1);
+        StdDraw.setXscale(0, N - 1);
         for (int i = 0; i < N; i++) {
-            StdDraw.filledRectangle(i, a[i]/2, .25, a[i]/2);
+            StdDraw.filledRectangle(i, a[i] / 2, .25, a[i] / 2);
         }
     }
 

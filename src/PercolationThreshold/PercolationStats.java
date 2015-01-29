@@ -1,4 +1,6 @@
-package Basil.PercolationThreshold;
+
+package PercolationThreshold;
+import PercolationThreshold.extlib.*;
 
 /**
  * Created by basilbeirouti on 1/26/15.

@@ -1,4 +1,4 @@
-package Basil.PercolationThreshold;
+package PercolationThreshold;
 
 /**
  * Created by basilbeirouti on 1/26/15.

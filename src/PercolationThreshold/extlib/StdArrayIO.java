@@ -1,4 +1,4 @@
-package Basil.PercolationThreshold;
+package PercolationThreshold.extlib;
 
 
 /*************************************************************************
@@ -47,22 +47,23 @@ package Basil.PercolationThreshold;
 
 
 /**
- *  <i>Standard array IO</i>. This class provides methods for reading
- *  in 1D and 2D arrays from standard input and printing out to
- *  standard output.
- *  <p>
- *  For additional documentation, see
- *  <a href="http://introcs.cs.princeton.edu/22libary">Section 2.2</a> of
- *  <i>Introduction to Programming in Java: An Interdisciplinary Approach</i>
- *  by Robert Sedgewick and Kevin Wayne.
+ * <i>Standard array IO</i>. This class provides methods for reading
+ * in 1D and 2D arrays from standard input and printing out to
+ * standard output.
+ * <p/>
+ * For additional documentation, see
+ * <a href="http://introcs.cs.princeton.edu/22libary">Section 2.2</a> of
+ * <i>Introduction to Programming in Java: An Interdisciplinary Approach</i>
+ * by Robert Sedgewick and Kevin Wayne.
  *
- *  @author Robert Sedgewick
- *  @author Kevin Wayne
+ * @author Robert Sedgewick
+ * @author Kevin Wayne
  */
 public class StdArrayIO {
 
     // it doesn't make sense to instantiate this class
-    private StdArrayIO() { }
+    private StdArrayIO() {
+    }
 
     /**
      * Read in and return an array of doubles from standard input.
@@ -196,7 +197,7 @@ public class StdArrayIO {
         StdOut.println(N);
         for (int i = 0; i < N; i++) {
             if (a[i]) StdOut.print("1 ");
-            else      StdOut.print("0 ");
+            else StdOut.print("0 ");
         }
         StdOut.println();
     }
@@ -226,7 +227,7 @@ public class StdArrayIO {
         for (int i = 0; i < M; i++) {
             for (int j = 0; j < N; j++) {
                 if (a[i][j]) StdOut.print("1 ");
-                else         StdOut.print("0 ");
+                else StdOut.print("0 ");
             }
             StdOut.println();
         }
