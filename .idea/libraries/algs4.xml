@@ -3,9 +3,7 @@
     <CLASSES>
       <root url="file://$USER_HOME$/algs4" />
     </CLASSES>
-    <JAVADOC>
-      <root url="file://$USER_HOME$/algs4/checkstyle-5.5/site/apidocs" />
-    </JAVADOC>
+    <JAVADOC />
     <SOURCES>
       <root url="file://$USER_HOME$/algs4/checkstyle-5.5/contrib" />
       <root url="file://$USER_HOME$/algs4/checkstyle-5.5/contrib/bcel/src/checkstyle" />
